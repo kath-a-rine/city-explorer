@@ -31,7 +31,6 @@ class App extends Component {
       error: true,
       errorMessage: error.message
     })
-
   }
   }
 
@@ -48,14 +47,17 @@ class App extends Component {
         <h1>City Explorer</h1>
         <p>Welcome to City Explorer. Enter the name of any U.S. city to find relevant location information!</p>
         <form onSubmit={this.handleCitySubmit}>
-          <label htmlFor="cityName">City Name: </label>
-          <input type="text" id="cityName" onChange={this.cityChange} />
-          <button type="submit">Explore!</button>
+          <fieldset>
+            <label htmlFor="cityName"><strong>City Name: </strong></label>
+            <br></br>
+            <input type="text" id="cityName" onChange={this.cityChange} />
+            <button type="submit">Explore!</button>
+          </fieldset>
         </form>
       
       {this.state.error
       ? 
-      <Alert>
+      <Alert variant='danger'>
         <p>Uh Oh! {this.state.errorMessage}</p>
       </Alert>
     :
@@ -63,9 +65,9 @@ class App extends Component {
       <Table striped bordered hover size="md">
         <thead>
           <tr>
-            <th scope="col">City</th>
-            <th scope="col">Latitude</th>
-            <th scope="col">Longitude</th>
+            <th>City</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
           </tr>
         </thead>
         <tbody>

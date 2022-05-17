@@ -14,6 +14,7 @@
 ## Credit and Collaboration
 
 * Ben Small on the wireframe.
+* Sam Brindle helped with conditional map rendering
 
 [Lab 6 Wireframe](./assets/lab06-wireframe.png)
 

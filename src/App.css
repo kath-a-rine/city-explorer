@@ -1,13 +1,9 @@
-body {
-    width: 960px;
-    margin: auto;
-}
-
  h1 {
       background-color: #8F93D9;
       color: #312A40; 
       text-align: center;
       padding: 15px;
+      width: 100%;
   }
 
 p {
@@ -15,17 +11,22 @@ p {
   }
 
 form {
-    margin-top: 30px;
+    margin: 30px;
 }  
 
 Table {
     border: 2px solid #F29D52;
     border-radius: 5px;
     background-color: #8F93D9;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 100%;
+    margin: auto;
   }
 
   td {
       text-align: center;
+  }
+
+  Figure.Image {
+    align-items: center;
   }
