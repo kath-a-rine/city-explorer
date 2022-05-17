@@ -15,7 +15,7 @@
 
 * Ben Small on the wireframe.
 
-[Lab 6 Wireframe]()
+[Lab 6 Wireframe](./assets/lab06-wireframe.png)
 
 ## Time Estimates:
 
