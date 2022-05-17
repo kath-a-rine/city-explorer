@@ -44,6 +44,7 @@ class App extends Component {
   render() {
     return (
       <>
+      <body>
         <h1>City Explorer</h1>
         <p>Welcome to City Explorer. Enter the name of any U.S. city to find relevant location information!</p>
         <form onSubmit={this.handleCitySubmit}>
@@ -91,6 +92,7 @@ class App extends Component {
         </Figure.Caption>
       </Figure>
       }
+      </body>
       </>
     )
   }
