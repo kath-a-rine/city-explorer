@@ -13,9 +13,13 @@
 
 ## Credit and Collaboration
 
+* Ben Small on the wireframe.
+
+[Lab 6 Wireframe]()
+
 ## Time Estimates:
 
-### **Task 1: Set up React repo and API keys**
+### **Lab 6 -Task 1: Set up React repo and API keys**
 
 Estimate of time needed to complete: 30 minutes
 
@@ -25,7 +29,7 @@ Finish time: 3:15pm
 
 Actual time needed to complete: 1 hour
 
-### **Task 2: Locations**
+### **Lab 6 - Task 2: Locations**
 
 Estimate of time needed to complete: 1.5 hrs
 
@@ -35,7 +39,7 @@ Finish time: 4:40pm
 
 Actual time needed to complete: 1 hour 10 minutes
 
-### **Task 3: Map**
+### **Lab 6 - Task 3: Map**
 
 Estimate of time needed to complete: 1 hour
 
@@ -45,7 +49,7 @@ Finish time: 5:45 pm
 
 Actual time needed to complete: 1 hour with CSS left to finesse
 
-### **Task 4: Errors**
+### **Lab 6 - Task 4: Errors**
 
 Estimate of time needed to complete: 30 minutes
 
