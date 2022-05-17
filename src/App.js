@@ -1,7 +1,10 @@
 import './App.css';
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Table, Figure, Alert } from 'react-bootstrap/'
+import { Alert } from 'react-bootstrap/'
+import Form from './components/CityForm.js'
+import Figure from './components/CityFigure.js'
+import Table from './components/CityTable.js'
 
 class App extends Component {
   constructor(props) {
@@ -43,18 +46,14 @@ class App extends Component {
   render() {
     return (
       <>
-      <body>
         <h1>City Explorer</h1>
         <p>Welcome to City Explorer. Enter the name of any U.S. city to find relevant location information!</p>
-        <form onSubmit={this.handleCitySubmit}>
-          <fieldset>
-            <label htmlFor="cityName"><strong>City Name: </strong></label>
-            <br></br>
-            <input type="text" id="cityName" onChange={this.cityChange} />
-            <button type="submit">Explore!</button>
-          </fieldset>
-        </form>
       
+      <Form 
+        handleCitySubmit={this.handleCitySubmit}
+        cityChange={this.cityChange}
+      />
+
       {this.state.error
       ? 
       <Alert variant='danger'>
@@ -62,39 +61,21 @@ class App extends Component {
       </Alert>
     :
     (
-      <Table striped bordered hover size="md">
-        <thead>
-          <tr>
-            <th>City</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{this.state.city}</td>
-            <td>{this.state.lat}</td>
-            <td>{this.state.lon}</td>
-          </tr>
-        </tbody>
-      </Table>
+      <Table 
+        city={this.state.city}
+        lat={this.state.lat}
+        lon={this.state.lon}
+      />
     )
     }
 
 {this.state.showMap && 
-      <Figure>
-        <Figure.Image
-          width={600}
-          height={600}
-          src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATION_API_KEY}&center=${this.state.lat},${this.state.lon}&zoom=12`}
-          alt="map"
-        />
-        <Figure.Caption>
-         Map of {this.state.city}.
-        </Figure.Caption>
-      </Figure>
+   <Figure 
+      city={this.state.city}
+      lat={this.state.lat}
+      lon={this.state.lon}
+   />
       }
-      </body>
       </>
     )
   }
