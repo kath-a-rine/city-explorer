@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Table, Figure, Button } from 'react-bootstrap/'
+import { Table, Figure, Alert } from 'react-bootstrap/'
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +54,9 @@ class App extends Component {
       
       {this.state.error
       ? 
-    <p>Uh Oh! {this.state.errorMessage}</p>
+      <Alert>
+        <p>Uh Oh! {this.state.errorMessage}</p>
+      </Alert>
     :
     (
       <Table striped bordered hover size="md">
