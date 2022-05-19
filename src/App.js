@@ -5,6 +5,7 @@ import { Alert } from 'react-bootstrap/'
 import Form from './components/CityForm.js'
 import Figure from './components/CityFigure.js'
 import Table from './components/CityTable.js'
+import Weather from './components/Weather.js'
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class App extends Component {
     this.state = {
       cityData: [],
       city: '',
-      showMap: false
+      showMap: false,
+      weatherData: []
     }
   }
 
@@ -21,11 +23,19 @@ class App extends Component {
     try {
     let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`;
     console.log(this.state.city)
+    
     let cityInfo = await axios.get(url);
     console.log(cityInfo.data)
+    
+    let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?city=${this.state.city}`;
+    
+    let weather = await axios.get(weatherUrl);
+    console.log(weather);
+
     this.setState({
       lat: cityInfo.data[0].lat,
       lon: cityInfo.data[0].lon,
+      weatherData: weather,
       showMap: true,
       error: false
     });
@@ -61,20 +71,27 @@ class App extends Component {
       </Alert>
     :
     (
+      <>
       <Table 
         city={this.state.city}
         lat={this.state.lat}
         lon={this.state.lon}
       />
+      </>
     )
     }
 
 {this.state.showMap && 
+  <>
    <Figure 
       city={this.state.city}
       lat={this.state.lat}
       lon={this.state.lon}
    />
+   <Weather 
+     weather={this.state.weatherData}
+   />
+   </>
       }
       </>
     )

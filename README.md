@@ -16,7 +16,7 @@
 * Ben Small on the wireframe.
 * Sam Brindle helped with conditional map rendering
 
-[Lab 6 Wireframe](./assets/lab06-wireframe.png)
+
 
 ## Time Estimates:
 
@@ -29,6 +29,8 @@ Start time: 2:15pm
 Finish time: 3:15pm
 
 Actual time needed to complete: 1 hour
+
+![Lab 06 Web Request Response Cycle](./assets/lab06-wireframe.png)
 
 ### **Lab 6 - Task 2: Locations**
 
