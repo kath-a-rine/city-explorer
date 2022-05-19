@@ -20,6 +20,8 @@
 
 ## Time Estimates:
 
+![Lab 06 Web Request Response Cycle](./assets/lab06-wireframe.png)
+
 ### **Lab 6 -Task 1: Set up React repo and API keys**
 
 Estimate of time needed to complete: 30 minutes
@@ -29,8 +31,6 @@ Start time: 2:15pm
 Finish time: 3:15pm
 
 Actual time needed to complete: 1 hour
-
-![Lab 06 Web Request Response Cycle](./assets/lab06-wireframe.png)
 
 ### **Lab 6 - Task 2: Locations**
 
