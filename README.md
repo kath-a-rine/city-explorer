@@ -16,11 +16,12 @@
 * Ben Small on the wireframe.
 * Sam Brindle helped with conditional map rendering
 
-
+![WRRC - Lab 06](./assets/lab06-wireframe.png)
+![WRRC - Lab 07](./assets/lab07.png)
+![WRRC - Lab 08](./assets/lab-08.png);
+![WRRC - Lab 09](./assets/Lab-09.png);
 
 ## Time Estimates:
-
-![Lab 06 Web Request Response Cycle](./assets/lab06-wireframe.png)
 
 ### **Lab 6 -Task 1: Set up React repo and API keys**
 

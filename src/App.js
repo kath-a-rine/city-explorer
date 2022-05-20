@@ -6,6 +6,7 @@ import Form from './components/CityForm.js'
 import Figure from './components/CityFigure.js'
 import Table from './components/CityTable.js'
 import Weather from './components/Weather.js'
+import Movies from './components/Movies.js'
 
 class App extends Component {
   constructor(props) {
@@ -32,13 +33,22 @@ class App extends Component {
     let weather = await axios.get(weatherUrl);
     console.log(weather);
 
+    let movieUrl = `${process.env.REACT_APP_SERVER}/movies?city=${this.state.city}`;
+    let movie = await axios.get(movieUrl);
+    
+    this.setState({
+      movieData: movie
+    })
+    
+
     this.setState({
       lat: cityInfo.data[0].lat,
       lon: cityInfo.data[0].lon,
       weatherData: weather,
       showMap: true,
-      error: false
+      error: false,
     });
+
   } catch (error) {
     this.setState({
       error: true,
@@ -46,6 +56,7 @@ class App extends Component {
     })
   }
   }
+
 
   cityChange = (e) => {
     this.setState({
@@ -83,14 +94,16 @@ class App extends Component {
 
 {this.state.showMap && 
   <>
+    <Weather 
+     weather={this.state.weatherData}
+   />
    <Figure 
       city={this.state.city}
       lat={this.state.lat}
       lon={this.state.lon}
    />
-   <Weather 
-     weather={this.state.weatherData}
-   />
+  <Movies 
+    movieData={this.state.movieData}/>
    </>
       }
       </>
