@@ -23,20 +23,15 @@ class App extends Component {
     e.preventDefault();
     try {
     let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_API_KEY}&q=${this.state.city}&format=json`;
-    console.log(this.state.city)
-    
+  
     let cityInfo = await axios.get(url);
-    console.log(cityInfo.data)
     
     let weatherUrl = `${process.env.REACT_APP_SERVER}/weather?city=${this.state.city}`;
-    console.log(weatherUrl);
     
     let weather = await axios.get(weatherUrl);
-    console.log(weather);
 
     let movieUrl = `${process.env.REACT_APP_SERVER}/movies?city=${this.state.city}`;
     let movie = await axios.get(movieUrl);
-    console.log(movieUrl);
     
     this.setState({
       movieData: movie
