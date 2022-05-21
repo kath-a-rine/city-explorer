@@ -36,7 +36,6 @@ class App extends Component {
     this.setState({
       movieData: movie
     })
-    
 
     this.setState({
       lat: cityInfo.data[0].lat,
@@ -53,7 +52,6 @@ class App extends Component {
     })
   }
   }
-
 
   cityChange = (e) => {
     this.setState({
