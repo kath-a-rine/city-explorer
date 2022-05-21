@@ -15,6 +15,7 @@
 
 * Ben Small on the wireframe.
 * Sam Brindle helped with conditional map rendering
+* Dana helped with nesting components and mapping though data for lab 9
 
 ![WRRC - Lab 06](./assets/lab06-wireframe.png)
 ![WRRC - Lab 07](./assets/lab07.png)
