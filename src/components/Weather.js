@@ -5,7 +5,7 @@ import WeatherDay from './WeatherDay'
 class Weather extends React.Component {
     render() {
         console.log(this.props.weather);
-        let weather = this.props.weather.data.map((day, idx) => 
+        let weather = this.props.weatherData.map((day, idx) => 
             <WeatherDay
                 weatherData = {day}
                 key = {idx}
